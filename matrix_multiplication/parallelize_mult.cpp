@@ -48,7 +48,7 @@ int main(int argc, char* argv[]) {
     MPI_Bcast(matrix2, N * N, MPI_FLOAT, 0, MPI_COMM_WORLD);
 
     // Start timing
-    auto start = chrono::high_resolution_clock::now();
+    // auto start = chrono::high_resolution_clock::now();
 
     // Matrix multiplication
     for (int i = 0; i < rows_per_process; ++i)
@@ -58,9 +58,9 @@ int main(int argc, char* argv[]) {
                 local_result[i][j] += local_matrix1[i][k] * matrix2[k][j];
         }
 
-    // End timing
-    auto end = chrono::high_resolution_clock::now();
-    chrono::duration<double> elapsed = end - start;
+    // // End timing
+    // auto end = chrono::high_resolution_clock::now();
+    // chrono::duration<double> elapsed = end - start;
 
     // Gather results back to rank 0
     MPI_Gather(local_result, rows_per_process * N, MPI_FLOAT,
