@@ -1,4 +1,5 @@
 matrix_multiplication/*.out
 matrix_multiplication/matrices/
-
 trapezoidal/*.out
+GaussElimination/.*out
+GaussElimination/matrices/
