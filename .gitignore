@@ -1,5 +1,12 @@
 matrix_multiplication/*.out
 matrix_multiplication/matrices/
+
 trapezoidal/*.out
+
 GaussElimination/.*out
 GaussElimination/matrices/
+
+heat_equation_1D/data/
+heat_equation_1D/*.out
+heat_equation_1D/images/
+heat_equation_1D/*.txt
